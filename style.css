@@ -1,0 +1,20 @@
+body{
+  background-color: #EEE6DD;
+}
+
+div{
+  background-color: #EEE6DD;
+  border: dotted 0.05px rgba(0,0,0,0.5)
+}
+.container{
+  background-color: lightcoral;
+  display: grid;
+  width: 80vh;
+  height: 80vh;
+  padding: 1em;
+}
+
+div.color{
+  transition: 0.1s;
+  background-color: darkslategray;
+}

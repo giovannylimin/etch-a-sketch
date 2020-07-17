@@ -2,12 +2,26 @@
 <html>
   <head>
     <meta charset="UTF-8" lang="en">
-    <title>Etch a Sketch | reveal your hidden artsy soul</title>
+    <title>Etch a Sketch | reveal your hidden artistry</title>
     <link href="style.css" rel="stylesheet" type="text/css">
     <meta name="keywords" content="etch a sketch">
     <meta name="author" content="Giovanny Limin">
   </head>
   <body>
+    <h1>Etch a Sketch</h1>
+    <h2>reveal your hidden artistry</h2>
+    <p>Instructions: hover your mouse over the canvas below</p>
+    <button name="reset">Reset Canvas</button>
+    <label for="size">Change the canvas resolution (e.g. "16" for 16x16 pixels)</label>
+    <input type="text" name="size">
+    <p>Please enter a valid number</p>
+    <label for="color">Choose paint color</label>
+    <input type="color" name="color">
+    <label for="mode">Choose paint method</label>
+    <select name="mode">
+      <option value="hover" selected>Hover to paint</option>
+      <option value="press">Press to paint</option>
+    </select>
     <script src="script.js"></script>
   </body>
 </html>
