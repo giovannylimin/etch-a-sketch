@@ -4,26 +4,49 @@
     <meta charset="UTF-8" lang="en">
     <title>Etch a Sketch | reveal your hidden artistry</title>
     <link href="style.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500&family=Playfair+Display:ital,wght@1,100&family=Oswald:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500&family=Oswald:wght@400;500&display=swap" rel="stylesheet">
     <meta name="keywords" content="etch a sketch">
     <meta name="author" content="Giovanny Limin">
   </head>
   <body>
-    <h1>Etch a<br>Sketch</h1>
-    <h2>reveal your hidden artistry</h2>
-    <button name="start">start</button>
-    <p>Instructions: hover your mouse over the canvas below</p>
-    <button name="reset">Reset Canvas</button>
-    <label for="size">Change the canvas resolution (e.g. "16" for 16x16 pixels)</label>
-    <input type="text" name="size">
-    <p>Please enter a valid number</p>
-    <label for="color">Choose paint color</label>
-    <input type="color" name="color">
-    <label for="mode">Choose paint method</label>
-    <select name="mode">
-      <option value="hover" selected>Hover to paint</option>
-      <option value="press">Press to paint</option>
-    </select>
+    <header>
+      <h1>Etch a<br>Sketch</h1>
+      <h2>reveal your hidden artistry</h2>
+      <button name="start">start</button>  
+    </header>
+    <main>
+      <article>
+        <p>Instructions: hover your mouse over the canvas below</p>
+        <div class="nest">
+    
+        </div>
+        <div class="left">
+          <label for="random">random color</label>
+          <input type="checkbox" name="random" class="switch"></input><br>
+          <label for="reset">reset canvas</label><br>
+          <button name="reset" class="round">⟳</button>  
+        </div>
+        <button name="option" class="round right">⚙︎</button>    
+      </article>
+      <section class="settings">
+          <label for="mode">mode</label>
+          <select name="mode">
+            <option value="hover" selected>Hover to paint</option>
+            <option value="press">Press to paint</option>
+          </select>
+          <label for="color">color</label>
+          <input type="color" name="color" value="#000000">
+          <label for="size">resolution</label>
+          <input type="number" name="size" min="1" max="50" placeholder="16">
+          <p></p>
+          <button name="exit" class="round">╳</button>
+      </section>
+
+    </main>
+    <footer>
+      <span id="c-year">©2020</span><br>
+      <span id="c-author">made with ♥︎︎ by gio</span>
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>
