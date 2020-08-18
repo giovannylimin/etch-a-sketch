@@ -57,14 +57,19 @@ html{
   height: 100vh;
 }
 body{
-  background-image: -webkit-linear-gradient(to top , #0F2027, #203A43, #2C5364, #203A43, #0F2027);
-  background-image: -moz-linear-gradient(to top , #0F2027, #203A43, #2C5364, #203A43, #0F2027);
-  background-image: -o-linear-gradient(to top , #0F2027, #203A43, #2C5364, #203A43, #0F2027);
-  background-image: linear-gradient(to top , #0F2027, #203A43, #2C5364, #203A43, #0F2027);
+  background-image: -webkit-linear-gradient(to top right, #0F2027, #203A43, #2C5364, #203A43, #0F2027);
+  background-image: -moz-linear-gradient(to top right, #0F2027, #203A43, #2C5364, #203A43, #0F2027);
+  background-image: -o-linear-gradient(to top right, #0F2027, #203A43, #2C5364, #203A43, #0F2027);
+  background-image: linear-gradient(to top right, #0F2027, #203A43, #2C5364, #203A43, #0F2027);
   background-size: 200% 200%;
-  background-position: 0 50%;
+  background-position: 0 100%;
   opacity: 1;
   min-width: 800px;
+  transition: 0.5s;
+}
+
+.moveBackground{
+  background-position: 100% 100%;
 }
 
 h1{
@@ -93,12 +98,14 @@ button{
   font-size: 2em;
   font-weight: 300;
   text-shadow: -0.1em 0.1em 0 #7E5461;
-
   border: solid 0.1em #FDE7DD;
   outline: none;
   background-color: #A06679;
   color: #FFF3ED;
   transition: ease-in-out 0.1s;
+  width: 2em;
+  height: 2em;
+  border-radius: 5em;
 
 }
 
@@ -118,7 +125,7 @@ button:hover{
 }
 
 .nest div{
-  border: dotted 0.05px rgba(0,0,0,0.5);
+  border: dotted 0.05px rgba(255, 241, 235,0.2);
 
 }
 .container{
@@ -131,15 +138,9 @@ button:hover{
   padding: 1em;
 }
 
-
-
-  
-
 .shrink{
   transform: scale(0.96);
 }
-
-
 
 .disappear{
   opacity: 0;
@@ -165,7 +166,6 @@ footer{
 
 header{
   margin-top:7em;
-
 }
 
 label{
@@ -187,6 +187,8 @@ label{
 
 .switch{
   appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   display: inline-block;
   box-sizing: border-box;
   width: 5em;
@@ -198,7 +200,6 @@ label{
   background-color: #203A43;
   margin-bottom: 2.5em;
 }
-
 
 .switch:before{
   position: absolute;
@@ -215,17 +216,10 @@ label{
 
 .checked.switch:before{
   transform: translate(2.5em,0);
-}
+}ter
 
 .checked.switch{
   background-color: #A06679;
-}
-
-button{
-  width: 2em;
-  height: 2em;
-  border-radius: 5em;
-  margin-top: -0.5em;
 }
 
 .right {
@@ -250,10 +244,12 @@ section{
   opacity: 1;
   transition: 0.2s ;
   transform: translate(12em,0);
-
 }
 
 select, [type="number"]{
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   outline: none;
   border-radius: 3em;
   transition-delay: 0.15s;
@@ -267,10 +263,13 @@ select, [type="number"]{
   font-weight: 500;
   text-align: center;
   margin-bottom: 2em;
-
 }
-
+[type="number"]{
+  max-width: 3em;
+}
 [type="color"]{
+  -webkit-appearance: none;
+  outline: none;
   background-color: #FDE7DD;
   display: inline-block;
   box-sizing: border-box;
@@ -313,5 +312,12 @@ section button{
   opacity: .5;
 }
 
-section button:hover{
+
+main{
+  transition: 0.5s;
+}
+
+p, .nest, .left, button.right{
+  transition: ease-in-out 0.4s;
+  opacity:0
 }
