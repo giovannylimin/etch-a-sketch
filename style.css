@@ -216,10 +216,10 @@ label{
 
 .checked.switch:before{
   transform: translate(2.5em,0);
-}ter
+}
 
 .checked.switch{
-  background-color: #A06679;
+  background-color: #A06679 !important;
 }
 
 .right {
