@@ -4,7 +4,7 @@ const start = document.querySelector('[name="start"]');
 const title = document.querySelector('header');
 const p = main.querySelector('p');
 const resolution = document.querySelector('input[name="size"');
-const random = document.querySelector('[name="random"]')
+const random = document.querySelector('[name="random"]');
 const reset = document.querySelector('button[name="reset"');
 const buttons = document.querySelectorAll('button');
 const menu = document.querySelector('section');
@@ -23,7 +23,7 @@ exit.addEventListener('click',closeMenu);
 random.addEventListener('change', () => random.checked ? random.classList.add('checked') : random.classList.remove('checked'));
 buttons.forEach(button => {
   button.addEventListener('click', shrink);
-  button.addEventListener('transitionend', revert)
+  button.addEventListener('transitionend', revert);
 });
 
 createDiv(16);
@@ -71,12 +71,12 @@ function createDiv(n){
     console.log(mode);
     if (mode === "hover"){
     pixels.forEach(pixel=>pixel.addEventListener('mouseenter',changeBackground));
-    p.textContent = "Instruction: hover your mouse over the canvas below"
+    p.textContent = "Instruction: hover your mouse over the canvas below";
   } else if(mode=== "press"){
     handleUp();
     pixels.forEach(pixel => pixel.addEventListener('mousedown',handlePress));
     pixels.forEach(pixel=>pixel.addEventListener('mouseup', handleUp));
-    p.textContent = "Instruction: click or press the tiles below"
+    p.textContent = "Instruction: click or press the tiles below";
   }
 }
 }
@@ -94,7 +94,7 @@ function changeSize(){
       instruction.textContent = "";
       }else if(size>50){
         instruction.innerHTML = "Try a smaller number <br> (1-50)";
-    }else instruction.innerHTML = "Enter a valid number <br> (1-50)"
+    }else instruction.innerHTML = "Enter a valid number <br> (1-50)";
 }
 
 function handlePress(){
@@ -139,7 +139,7 @@ function changeBackground(e){
 
 function resetCanvas(){
   const pixels = document.querySelectorAll('.container div');
-  pixels.forEach(pixel => pixel.style.backgroundColor="")
+  pixels.forEach(pixel => pixel.style.backgroundColor="");
 }
 
 function shrink(e){
